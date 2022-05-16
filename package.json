@@ -1,0 +1,21 @@
+{
+  "name": "report-upload-script",
+  "version": "1.0.0",
+  "description": "Script to test report upload service",
+  "main": "encrypt.ts",
+  "scripts": {
+    "upload": "ts-node encrypt.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "ts-node": "^10.7.0",
+    "tsc": "^2.0.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.1",
+    "@types/uuid": "^8.3.4"
+  }
+}

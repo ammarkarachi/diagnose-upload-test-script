@@ -74,18 +74,21 @@ GarDU9BBdgDgidIPg2Y9a4XYRLy1gWEvKWVxKdtB6+Tns0kFpkClAeMxHE3Q1EgD
       const report = 'https://yc65ayd1ge.execute-api.us-east-1.amazonaws.com/beta/report';
 
       const data = JSON.stringify(payload);
-      await fetch(report, {
+      const result = await fetch(report, {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
           'content-length': data.length.toString(),
         },
         body: data,
-      }).then(r => {
-        console.log(r.status);
-        console.log(r.text)
+      })
+      console.info(JSON.stringify(result.status))
+      console.log(JSON.stringify( await result.text()));
+      // }).then(r => {
+      //   console.log(r.status);
+      //   console.log(JSON.stringify(r))
         
-        // no op
-      });
+      //   // no op
+      // }).catch(e => console.log(JSON.stringify(e)));
     
 })();
